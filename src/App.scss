@@ -1,0 +1,95 @@
+$bg-color: #282c34;
+* {
+  box-sizing: border-box;
+}
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: $bg-color;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-board {
+  display: grid;
+  grid-template-columns: repeat(3, 10vmax);
+  grid-template-rows: repeat(3, 10vmax);
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.App-button {
+  cursor: pointer;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+  transition: all 0.3s;
+  border: solid 1px white;
+  padding: 2px 12px;
+  margin: 8px;
+  &:hover {
+    color: $bg-color;
+    border-color: $bg-color;
+    background-color: white;
+  }
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+.App-vals {
+  color: #eee;
+  border: 1px solid #eee;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+  &:hover {
+    background-color: #61dafb;
+    color: $bg-color;
+    transition: all 0.3s;
+    cursor: pointer;
+    font-size: 200%;
+  }
+  &:active {
+    font-size: 50%;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
